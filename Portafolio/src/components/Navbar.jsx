@@ -1,15 +1,17 @@
-import React from "react";
+import React from 'react';
 
-export default function Navbar() {
+const Navbar = () => {
   return (
-    <nav className="navbar">
-      <h1 className="logo">FullStack Developer.Bautista</h1>
+    <nav className="navbar fade-in">
+      <div className="logo">TuNombre</div>
       <ul>
-        <li><a href="#hero">Inicio</a></li>
-        <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#contact">Contacto</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   );
-}
+};
+
+export default Navbar;

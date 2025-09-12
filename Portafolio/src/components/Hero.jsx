@@ -1,9 +1,15 @@
-export default function Hero() {
+import React from 'react';
+
+const Hero = () => {
   return (
-    <section id="hero" className="hero">
-      <h2>¡Hola! Soy Bautista, Alias: Insa 👋</h2>
-      <p>Estudiante de informática con pasión por el desarrollo web.</p>
-      <a href="#projects" className="btn">Ver mis proyectos</a>
+    <section className="hero fade-in">
+      <h1>Hi, my name is</h1>
+      <h2 className="big-heading">Tu Nombre Completo</h2>
+      <p className="typewriter">Software Engineer &amp; Designer</p>
+      <p>I’m a software engineer specializing in building exceptional digital experiences.</p>
+      <a href="#contact" className="cta-button">Get In Touch</a>
     </section>
   );
-}
+};
+
+export default Hero;

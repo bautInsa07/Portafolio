@@ -1,23 +1,30 @@
-import React from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Lenguajes from "./components/lenguajes";
-import "./index.css";
+import React, { useState } from 'react';
+import Sidebar from './components/Sidebar';
+import About from './components/About';
+import Experience from './components/Experience';
+import Projects from './components/Projects';
+import Skills from './components/Skills';
+import './index.css';
 
-export default function App() {
+function App() {
+  const [activeSection, setActiveSection] = useState('About');
+
+  const sections = {
+    About: <About />,
+    Experience: <Experience />,
+    Projects: <Projects />,
+    Skills: <Skills />,
+  };
+
   return (
-    <>
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Lenguajes/>
-        <Projects />
-        <Contact />
+    <div className="layout">
+      <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
+      <main className="content">
+        <section className="section">{sections[activeSection]}</section>
+        <footer className="footer">Diseñado por Ti © 2025</footer>
       </main>
-    </>
+    </div>
   );
 }
+
+export default App;
