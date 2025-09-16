@@ -18,7 +18,7 @@ const Projects = () => {
 
   return (
     <div>
-      <h2 className="numbered-heading">Algunos Proyectos</h2>
+      <h2>Algunos Proyectos</h2>
       <div className="projects-grid">
         {projects.map((proj, index) => (
           <div key={index} className="project-card">

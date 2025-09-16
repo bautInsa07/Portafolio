@@ -18,7 +18,7 @@ const Experience = () => {
 
   return (
     <div>
-      <h2 className="numbered-heading">Dónde He Trabajado</h2>
+      <h2>Dónde He Trabajado</h2>
       <div className="timeline">
         {experiences.map((exp, index) => (
           <div key={index} className="timeline-item">
