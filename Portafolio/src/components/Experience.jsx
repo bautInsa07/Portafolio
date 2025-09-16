@@ -17,20 +17,20 @@ const Experience = () => {
   ];
 
   return (
-    <div>
-      <h2>Dónde He Trabajado</h2>
+    <section className="section">
+      <h2 className="numbered-heading">Dónde He Trabajado</h2>
       <div className="timeline">
         {experiences.map((exp, index) => (
           <div key={index} className="timeline-item">
             <div className="timeline-content">
               <h3>{exp.title}</h3>
-              <p>{exp.company} | {exp.period}</p>
+              <p className="company">{exp.company} | {exp.period}</p>
               <p>{exp.desc}</p>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

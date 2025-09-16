@@ -10,7 +10,9 @@ const Sidebar = ({ activeSection, setActiveSection }) => {
 
   return (
     <aside className="sidebar">
-      <div className="logo">Insa. Full-Stack Developer</div>
+      <div className="logo">
+        <span className="highlight">Insa.</span> Full-Stack Developer
+      </div>
       <nav>
         <ul>
           {navItems.map((item) => (

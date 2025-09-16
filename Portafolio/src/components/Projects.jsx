@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaCode, FaExternalLinkAlt } from "react-icons/fa";
 
 const Projects = () => {
   const projects = [
@@ -17,24 +18,26 @@ const Projects = () => {
   ];
 
   return (
-    <div>
-      <h2>Algunos Proyectos</h2>
+    <section className="section">
+      <h2 className="numbered-heading">Algunos Proyectos</h2>
       <div className="projects-grid">
         {projects.map((proj, index) => (
           <div key={index} className="project-card">
             <h3 className="project-title">{proj.title}</h3>
             <p className="project-desc">{proj.desc}</p>
-            <div>
-              {proj.tags.map((tag, i) => <span key={i} className="tag">{tag}</span>)}
+            <div className="tags">
+              {proj.tags.map((tag, i) => (
+                <span key={i} className="tag">{tag}</span>
+              ))}
             </div>
             <div className="project-links">
-              <a href={proj.links.demo}>Demo</a>
-              <a href={proj.links.github}>Código</a>
+              <a href={proj.links.demo}><FaExternalLinkAlt /> Demo</a>
+              <a href={proj.links.github}><FaCode /> Código</a>
             </div>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
